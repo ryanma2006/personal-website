@@ -1,0 +1,258 @@
+.page {
+  min-height: 100vh;
+  padding: 32px 24px;
+  display: block;
+}
+
+.columns {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  column-gap: 24px;
+}
+
+.landingCard {
+  min-height: calc(100vh - 64px);
+  padding: 100px 0 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+}
+
+.tabButton {
+  border: none;
+  border-bottom: 1px solid #9a9a9a;
+  border-radius: 0;
+  background: transparent;
+  color: #6d6d6d;
+  font-size: 0.84rem;
+  padding: 0 0 3px;
+  cursor: pointer;
+}
+
+/* Remove default browser focus ring (blue box) on tab click */
+.tabButton:focus {
+  outline: none;
+}
+
+/* Optional: subtle focus for keyboard users only (not blue) */
+.tabButton:focus-visible {
+  outline: 2px solid #1f1f1f;
+  outline-offset: 3px;
+}
+
+.tabButton.active {
+  border-color: #1f1f1f;
+  color: #1f1f1f;
+  font-weight: 500;
+}
+
+.landingName {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.landingText {
+  margin: 16px 0 0;
+  max-width: 60ch;
+}
+
+.tabContent {
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.sectionCopy {
+  margin: 0;
+  max-width: 60ch;
+}
+
+.aboutSection {
+  display: grid;
+  gap: 16px;
+}
+
+.aboutHeading {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.jobList {
+  display: grid;
+  gap: 14px;
+  max-width: 60ch;
+}
+
+.jobCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #fafafa;
+}
+
+.jobCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.jobTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.jobTitleLink {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #b8b8b8;
+  transition: border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.jobTitleLink:hover {
+  border-bottom-color: #1f1f1f;
+  opacity: 0.9;
+}
+
+.jobCompany {
+  margin: 4px 0 0;
+  font-size: 0.92rem;
+  color: #444;
+}
+
+.jobPeriod {
+  font-size: 0.82rem;
+  color: #737373;
+  white-space: nowrap;
+}
+
+.jobDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4f4f4f;
+}
+
+
+.funFact {
+  margin: 180px 0 0;
+  padding-top: -100;
+  max-width: 60ch;
+  color: #595959;
+  font-size: 0.95rem;
+}
+
+.socialRow {
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  padding-top: 20px;
+  padding-bottom: 4px;
+}
+
+.socialLink {
+  display: inline-flex;
+  line-height: 0;
+  opacity: 0.88;
+  transition: opacity 0.15s ease;
+}
+
+.socialLink:hover {
+  opacity: 1;
+}
+
+.socialIconImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.projectsSection {
+  display: grid;
+  gap: 14px;
+}
+
+.projectsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.projectCard {
+  border: 1px solid #d6d6d6;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.projectLinkWrap {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.projectCard img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.projectMeta {
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projectCard h3 {
+  margin: 0;
+  font-size: 1.12rem;
+  font-weight: 600;
+}
+
+.projectDate {
+  font-size: 0.82rem;
+  color: #737373;
+  white-space: nowrap;
+}
+
+.projectDescription {
+  margin: 0;
+  color: #4f4f4f;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.projectsEmpty {
+  margin: 0;
+  border: 1px dashed #c5c5c5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #575757;
+}
