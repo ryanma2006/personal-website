@@ -12,7 +12,7 @@ function App() {
       <div className="columns">
         <div aria-hidden="true" />
         <section className="landingCard" aria-label="Intro">
-          <h1 className="landingName">Hi! I'm Ryan Ma</h1>
+          <h1 className="landingName">Ryan Ma</h1>
           <p className="landingText">
             Professional gamer turned into software engineer and builder
           </p>
