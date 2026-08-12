@@ -14,7 +14,7 @@ function App() {
         <section className="landingCard" aria-label="Intro">
           <h1 className="landingName">Hi! I'm Ryan Ma</h1>
           <p className="landingText">
-            Computer hobbyist turned into software engineer and builder
+            Professional gamer turned into software engineer and builder
           </p>
 
           <nav className="tabs" aria-label="Sections">
