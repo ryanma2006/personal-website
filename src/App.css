@@ -256,3 +256,172 @@
   padding: 14px 16px;
   color: #575757;
 }
+
+.blogSection {
+  display: grid;
+  gap: 16px;
+}
+
+.blogList {
+  display: grid;
+  gap: 14px;
+  max-width: 60ch;
+}
+
+.blogCard {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #fafafa;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.blogCard:hover {
+  border-color: #bdbdbd;
+  background: #f5f5f5;
+}
+
+.blogCard:focus {
+  outline: none;
+}
+
+.blogCard:focus-visible {
+  outline: 2px solid #1f1f1f;
+  outline-offset: 3px;
+}
+
+.blogCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.blogTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.blogDate {
+  font-size: 0.82rem;
+  color: #737373;
+  white-space: nowrap;
+}
+
+.blogDescription {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4f4f4f;
+  white-space: pre-wrap;
+}
+
+.blogEmpty {
+  margin: 0;
+  border: 1px dashed #c5c5c5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: #575757;
+}
+
+.blogPost {
+  display: grid;
+  gap: 14px;
+  max-width: 60ch;
+}
+
+.blogBack {
+  justify-self: start;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  font-size: 0.88rem;
+  color: #595959;
+  cursor: pointer;
+}
+
+.blogBack:hover {
+  color: #1f1f1f;
+}
+
+.blogBack:focus {
+  outline: none;
+}
+
+.blogBack:focus-visible {
+  outline: 2px solid #1f1f1f;
+  outline-offset: 3px;
+}
+
+.blogPostHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.blogPostTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.blogPostBody {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #3a3a3a;
+}
+
+.blogPostBody p {
+  margin: 0 0 1em;
+}
+
+.blogPostBody p:last-child {
+  margin-bottom: 0;
+}
+
+.blogPostBody strong {
+  font-weight: 650;
+  color: #1f1f1f;
+}
+
+.blogPostBody em {
+  font-style: italic;
+}
+
+.blogPostBody a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.blogPostBody a:hover {
+  opacity: 0.85;
+}
+
+.blogPostBody ul,
+.blogPostBody ol {
+  margin: 0 0 1em;
+  padding-left: 1.25em;
+}
+
+.blogPostBody li {
+  margin: 0.25em 0;
+}
+
+.blogPostBody code {
+  font-size: 0.88em;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  background: #efefef;
+}

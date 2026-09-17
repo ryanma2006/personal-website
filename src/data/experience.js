@@ -2,12 +2,20 @@
 // Leave `link` empty until you have a URL.
 export const jobs = [
   {
+    id: 'catalyst',
+    title: 'University Leader',
+    company: 'University of Waterloo',
+    period: 'May 2026 - Aug 2026',
+    description: '🎓 Led a Summer Program Inspiring Engineering Principles to HS Students',
+    link: 'https://uwaterloo.ca/engineering-outreach/programs/catalyst/catalyst-summer-program',
+  },
+  {
     id: 'york-region',
     title: 'Operations Technician',
     company: 'York Region',
     period: 'Sept 2025 - Dec 2025',
     description:
-      "🚦 Building and managing York Region's traffic light systems",
+      "🚦 Maintaining York Region's traffic light systems",
     link: 'https://www.york.ca/transportation/traffic',
   },
   {

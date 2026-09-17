@@ -1,11 +1,20 @@
 import { useState } from 'react'
 import './App.css'
+import { posts } from './data/blog'
 import { jobs } from './data/experience'
 import { projects } from './data/projects'
 import { socialLinks } from './data/social'
 
 function App() {
   const [activeTab, setActiveTab] = useState('about')
+  const [activePostId, setActivePostId] = useState(null)
+
+  const openTab = (tab) => {
+    setActiveTab(tab)
+    setActivePostId(null)
+  }
+
+  const activePost = posts.find((post) => post.id === activePostId) ?? null
 
   return (
     <main className="page">
@@ -20,21 +29,21 @@ function App() {
           <nav className="tabs" aria-label="Sections">
             <button
               className={`tabButton ${activeTab === 'about' ? 'active' : ''}`}
-              onClick={() => setActiveTab('about')}
+              onClick={() => openTab('about')}
               type="button"
             >
               About
             </button>
             <button
               className={`tabButton ${activeTab === 'projects' ? 'active' : ''}`}
-              onClick={() => setActiveTab('projects')}
+              onClick={() => openTab('projects')}
               type="button"
             >
               Projects
             </button>
             <button
               className={`tabButton ${activeTab === 'blog' ? 'active' : ''}`}
-              onClick={() => setActiveTab('blog')}
+              onClick={() => openTab('blog')}
               type="button"
             >
               Blog
@@ -132,9 +141,50 @@ function App() {
             )}
 
             {activeTab === 'blog' && (
-              <p className="sectionCopy">
-                still thinking about what to write here...
-              </p>
+              <section className="blogSection">
+                {activePost ? (
+                  <article className="blogPost">
+                    <button
+                      className="blogBack"
+                      type="button"
+                      onClick={() => setActivePostId(null)}
+                    >
+                      ← Back to Blog
+                    </button>
+                    <header className="blogPostHeader">
+                      <h2 className="blogPostTitle">{activePost.title}</h2>
+                      <span className="blogDate">{activePost.date}</span>
+                    </header>
+                    <div className="blogPostBody">{activePost.content}</div>
+                  </article>
+                ) : (
+                  <>
+                    <h2 className="aboutHeading">Blog</h2>
+
+                    <div className="blogList">
+                      {posts.length === 0 && (
+                        <p className="blogEmpty">
+                          Add your posts in <code>src/data/blog.js</code>.
+                        </p>
+                      )}
+                      {posts.map((post) => (
+                        <button
+                          key={post.id}
+                          className="blogCard"
+                          type="button"
+                          onClick={() => setActivePostId(post.id)}
+                        >
+                          <div className="blogCardHeader">
+                            <h3 className="blogTitle">{post.title}</h3>
+                            <span className="blogDate">{post.date}</span>
+                          </div>
+                          <p className="blogDescription">{post.description}</p>
+                        </button>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </section>
             )}
           </div>
 
